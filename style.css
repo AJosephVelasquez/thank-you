@@ -1,0 +1,150 @@
+/******** GOOGLE FONTS ********/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    z-index: -100;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(124s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background-color: #ff2d75;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform: translateY(-100px);
+    line-height: 1.5;
+    position: relative;
+}
+
+.thank-you-message {
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 72px;
+}
+
+.thank-you-container > p {
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 13px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: orange;
+    font-size: 13px;
+}
+
+.home-link:hover {
+    color: orangered;
+}
+
+.credits {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(30px);
+    font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .thank-you-message {
+        font-size: 64px;
+    }
+
+    .thank-you-container > p, .home-link, .credits {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .thank-you-message {
+        font-size: 60px;
+    }
+
+    .thank-you-container > p, .home-link, .credits {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .thank-you-message {
+        font-size: 54px;
+    }
+
+    .thank-you-container > p, .home-link, .credits {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .thank-you-message {
+        font-size: 50px;
+    }
+
+    .thank-you-container > p, .home-link, .credits {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .thank-you-message {
+        font-size: 44px;
+    }
+
+    .thank-you-container > p, .home-link, .credits {
+        font-size: 7px;
+    }
+}
